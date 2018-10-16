@@ -1,6 +1,7 @@
 body{
   width: 100vw;
   font-family: 'Krub', sans-serif;
+  box-sizing: border-box;
 }
 
 /* HEADER */
@@ -31,4 +32,39 @@ header nav p{
   width: 60%;
   border: none;
   border-bottom: 1px solid #ccc;
+}
+
+@media(min-width: 576px){
+  /* HEADER */
+  header nav{
+    padding: 16px;
+  }
+}
+
+@media(min-width: 768px){
+  /* HEADER */
+  header nav{
+    padding: 20px;
+  }
+}
+
+@media(min-width: 992px){
+  /* SEARCH */
+  .search-engine{
+    margin-top: 32px;
+  }
+
+  header nav h1{
+    font-size: 1.6rem;
+  }
+  
+  header nav p{
+    font-size: .7rem;
+  }
+
+  /* SEARCH */
+  .search-input{
+    width: 50%;
+    font-size: 1.1rem;
+  }
 }
