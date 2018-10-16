@@ -1,0 +1,32 @@
+body{
+  width: 100vw;
+}
+
+/* HEADER */
+header nav{
+  padding: 10px;
+  text-align: center;
+  background-color: aquamarine;
+}
+
+header nav h1{
+  font-size: 1.5rem;
+}
+
+header nav p{
+  font-size: .6rem;
+}
+
+/* SEARCH */
+.search-engine{
+  text-align: center;
+  margin-top: 16px;
+}
+
+.search-input{
+  margin-top: 8px;
+  padding: 8px;
+  width: 60%;
+  border: none;
+  border-bottom: 1px solid #ccc;
+}
