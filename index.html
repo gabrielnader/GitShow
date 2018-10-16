@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>GitHub User Search</title>
+
+  <!-- CSS imports -->
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <h1><i class="fab fa-github"></i> GitHub User Search</h1>
+      <p>by Gabriel Nader</p>
+    </nav>
+  </header>
+  
+  <!-- GitHub user's search input -->
+  <div class="search-engine">
+    <label for="searchInput">Buscar usuário GitHub</label>
+    <input id="searchInput" class="search-input" type="search" placeholder="GitHub Username" onkeyup="app.git.nameSearch(this.value)">
+  </div>
+  
+  <!-- Dynamic layout of user's info -->
+  <div id="userProfile" class="user-profile"></div>
+
+  <!-- Dynamic layout of user's repositories -->
+  <div id="userRepositories" class="user-repositories"></div>
+</body>
+</html>
