@@ -7,12 +7,12 @@ class View{
     const { name, avatar_url, followers, following, bio, email } = user
     
     contentHolder.innerHTML = `
-    <h2>${name}</h2>
-    <img src='${avatar_url}'></img>
-    <p>Followers: ${followers}</p>
-    <p>Followings: ${following}</p>
-    <p>Bio: ${bio == null ? 'Nenhuma bio encontrada' : bio}</p>
-    <p>Email: ${email == null ? 'E-mail oculto' : email}</p>
+      <h2>${name}</h2>
+      <img src='${avatar_url}'></img>
+      <p>Followers: ${followers}</p>
+      <p>Followings: ${following}</p>
+      <p>Bio: ${bio == null ? 'Nenhuma bio encontrada' : bio}</p>
+      <p>Email: ${email == null ? 'E-mail oculto' : email}</p>
     `
   }
 
@@ -30,13 +30,14 @@ class View{
         <a href="${element.html_url}" target="_blank"><p>${element.html_url}</p></a>
         <a href="repositoryDetails.html?user=${element.owner.login}&repo=${element.name}">Detalhes</a>
       </li>  
-    `)
+    `
+    )
     
     contentHolder.innerHTML = `
-    <h2>Repositórios</h2>
-    <ul>
-    ${repos}
-    </ul>
+      <h2>Repositórios</h2>
+      <ul>
+        ${repos}
+      </ul>
     `
   }
 
