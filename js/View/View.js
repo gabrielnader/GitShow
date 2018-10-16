@@ -15,4 +15,28 @@ class View{
     <p>Email: ${email == null ? 'E-mail oculto' : email}</p>
     `
   }
+
+  showRepositories(user){
+    
+    let repos = ``
+    let contentHolder = document.querySelector('#user-repositories')
+    
+    user.forEach(element => repos += `
+      <li>
+        <p>${element.name}</p>
+        <p>star: ${element.stargazers_count}</p>
+        <p>linguagem: ${element.language}</p>
+        <p>${element.description === null ? 'Repositório sem descrição' : element.description}</p>
+        <a href="${element.html_url}" target="_blank"><p>${element.html_url}</p></a>
+        <a href="repositoryDetails.html?user=${element.owner.login}&repo=${element.name}">Detalhes</a>
+      </li>  
+    `)
+    
+    contentHolder.innerHTML = `
+    <h2>Repositórios</h2>
+    <ul>
+    ${repos}
+    </ul>
+    `
+  }
 }
