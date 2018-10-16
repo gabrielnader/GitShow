@@ -1,9 +1,9 @@
 class GitHubApiConnection{
 
-	nameSearch(value){
+	nameSearch(value, sort = 'stars'){
 
 		const userUrl = `https://api.github.com/users/${value}`
-		const reposUrl = `https://api.github.com/users/${value}/repos?sort=stars`
+		const reposUrl = `https://api.github.com/users/${value}/repos?sort=${sort}`
 	
 		fetch(userUrl)
 		.then(response => response.json())

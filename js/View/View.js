@@ -27,29 +27,32 @@ class View{
   showRepositories(user){
     
     let repos = ``
+    let userName = ''
     const contentHolder = document.querySelector('#user-repositories')
     
-    user.forEach(element => repos += `
-      <tr class="repositories-list-line">
-        <td class="repositories-list-col">
-          <p>${element.name}</p>
-        </td>
-        <td class="repositories-list-col">
-          <a href="repositoryDetails.html?user=${element.owner.login}&repo=${element.name}">Detalhes</a>
-        </td>
-      </tr>
-    `
-    )
+    user.forEach(element => {
+      repos += `
+        <tr class="repositories-list-line">
+          <td class="repositories-list-col">
+            <p>${element.name}</p>
+          </td>
+          <td class="repositories-list-col">
+            <a href="repositoryDetails.html?user=${element.owner.login}&repo=${element.name}">Detalhes</a>
+          </td>
+        </tr>
+      `
+      userName = element.owner.login
+
+    })
     
     contentHolder.innerHTML = `
-      <div class="">
-        <h2>Repositórios</h2>
-        <select onchange="">
-          <option value="star" selected>Estrelas</option>
-          <option value="name">Nome</option>
-          <option value="lang">Linguagem</option>
-        </select>
-      </div>
+      <h2>Repositórios</h2>
+      <select onchange="app.git.nameSearch('${userName}', this.value)">
+        <option disabled selected>Ordem</option>
+        <option value="stars">Estrelas</option>
+        <option value="forks">Forks</option>
+        <option value="updated">Atualização</option>
+      </select>
       <table class="repositories-list">
         <thead>
           <tr class="repositories-list-line">
