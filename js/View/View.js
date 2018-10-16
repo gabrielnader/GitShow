@@ -39,4 +39,17 @@ class View{
     </ul>
     `
   }
+
+  showRepositoryDetails(repo){
+  
+    let contentHolder = document.querySelector('#repo-details')
+  
+    contentHolder.innerHTML = `
+      <h2>${repo.name}</h2>
+      <p>Descrição: ${repo.description}</p>
+      <p>Estrelas: ${repo.stargazers_count}</p>
+      <p>Linguagem: ${repo.language}</p>
+      <a href="${repo.html_url}">Link externo: ${repo.html_url}</a>
+    `
+  }
 }
