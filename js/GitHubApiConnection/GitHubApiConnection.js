@@ -21,6 +21,5 @@ class GitHubApiConnection{
 		fetch(singleRepo)
 		.then(response => response.json())
 		.then(data => app.view.showRepositoryDetails(data))
-	
 	}
 }

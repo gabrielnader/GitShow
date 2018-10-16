@@ -1,0 +1,14 @@
+.repositories-list {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.repositories-list-col,
+.repositories-list-first-col {
+  border: 1px solid #ccc;
+  padding: 8px;
+}
+
+.repositories-list-line:nth-child(even) {
+  background-color: #dddddd;
+}

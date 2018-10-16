@@ -31,11 +31,13 @@
     <input id="search-input" class="search-input" type="search" placeholder="Buscar usuário GitHub" value="gabrielnader" onfocus="app.git.nameSearch(this.value)">
   </div>
   
-  <!-- Dynamic layout of user's info -->
-  <div id="user-profile" class="user-profile"></div>
-
-  <!-- Dynamic layout of user's repositories -->
-  <div id="user-repositories" class="user-repositories"></div>
+  <div class="user">
+    <!-- Dynamic layout of user's profile -->
+    <div id="user-profile" class="user-profile"></div>
+  
+    <!-- Dynamic layout of user's repositories -->
+    <div id="user-repositories" class="user-repositories"></div>
+  </div>
 
   <script src="js/GitHubApiConnection/GitHubApiConnection.js"></script>
   <script src="js/App/App.js"></script>

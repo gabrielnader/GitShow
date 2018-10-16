@@ -5,19 +5,23 @@ class View{
     const contentHolder = document.querySelector('#user-profile')
     
     const { name, avatar_url, followers, following, bio, email } = user
-    
-    contentHolder.innerHTML = `
-      <h2 class="user-name">${name}</h2>
-      <img class="user-image" src='${avatar_url}'></img>
-      <div class="user-follows">
-        <label class="user-followers">Followers: ${followers}</label>
-        <label class="user-followings">Followings: ${following}</label>
-      </div>
-      <div class="user-info">
-        <p class="user-email"><i class="user-icon far fa-envelope"></i>${email == null ? 'E-mail oculto' : email}</p>
-        <p class="user-bio"><i class="user-icon far fa-user"></i>${bio == null ? 'Nenhuma bio encontrada' : bio}</p>
-      </div>
-    `
+
+    if(name == null){
+      contentHolder.innerHTML = `<p>Usuário não encontrado!</p>`
+    }else{
+      contentHolder.innerHTML = `
+        <h2 class="user-name">${name}</h2>
+        <img class="user-image" src='${avatar_url}'></img>
+        <div class="user-follows">
+          <label class="user-followers">Followers: ${followers}</label>
+          <label class="user-followings">Followings: ${following}</label>
+        </div>
+        <div class="user-info">
+          <p class="user-email"><i class="user-icon far fa-envelope"></i>${email == null ? 'E-mail oculto' : email}</p>
+          <p class="user-bio"><i class="user-icon far fa-user"></i>${bio == null ? 'Nenhuma bio encontrada' : bio}</p>
+        </div>
+      `
+    }
   }
 
   showRepositories(user){
@@ -26,11 +30,11 @@ class View{
     const contentHolder = document.querySelector('#user-repositories')
     
     user.forEach(element => repos += `
-      <tr>
-        <td>
+      <tr class="repositories-list-line">
+        <td class="repositories-list-col">
           <p>${element.name}</p>
         </td>
-        <td>
+        <td class="repositories-list-col">
           <a href="repositoryDetails.html?user=${element.owner.login}&repo=${element.name}">Detalhes</a>
         </td>
       </tr>
@@ -39,11 +43,11 @@ class View{
     
     contentHolder.innerHTML = `
       <h2>Repositórios</h2>
-      <table>
+      <table class="repositories-list">
         <thead>
-          <tr>
-            <th>Nome</th>
-            <th>Ver mais</th>
+          <tr class="repositories-list-line">
+            <th class="repositories-list-first-col">Nome</th>
+            <th class="repositories-list-first-col">Ver mais</th>
           </tr>
         </thead>
         <tbody>

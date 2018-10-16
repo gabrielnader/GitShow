@@ -52,15 +52,52 @@
 }
 
 @media(min-width: 576px){
+  .user-name{
+    margin: 8px 0 20px;
+  }
 
+  .user-image{
+    width: 80%;
+    margin: 0 auto 22px;
+  }
+
+  .user-followers,
+  .user-followings{
+    padding: 10px;
+  }
+
+  .user-info{
+    width: 80%;
+    margin: 0 auto;
+  }
 }
 
 @media(min-width: 768px){
+  .user-image{
+    width: 50%;
+  }
 
+  .user-info{
+    width: 50%;
+  }
 }
 
 @media(min-width: 992px){
+  .user-image{
+    width: 80%;
+  }
 
+  .user-info{
+    width: 80%;
+  }
+
+  .user-profile{
+    margin: 0;
+  }
+
+  .user-name{
+    margin-top: 0;
+  }
 }
 
 @media(min-width: 1200px){
