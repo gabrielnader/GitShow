@@ -27,7 +27,7 @@ class View{
   showRepositories(user){
     
     let repos = ``
-    let userName = ''
+    const userName = user[0].owner.login
     const contentHolder = document.querySelector('#user-repositories')
     
     user.forEach(element => {
@@ -41,8 +41,6 @@ class View{
           </td>
         </tr>
       `
-      userName = element.owner.login
-
     })
     
     contentHolder.innerHTML = `
