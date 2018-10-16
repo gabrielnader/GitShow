@@ -12,6 +12,9 @@
   <link rel="stylesheet" href="css/userProfile.css">
   <link rel="stylesheet" href="css/userRepositories.css">
 
+  <!-- Font import -->
+  <link href="https://fonts.googleapis.com/css?family=Krub" rel="stylesheet">
+
   <!-- FontAwesome CDN to use icons -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
 </head>
@@ -25,8 +28,7 @@
   
   <!-- GitHub user's search input -->
   <div class="search-engine">
-    <label for="search-input">Buscar usuário GitHub</label>
-    <input id="search-input" class="search-input" type="search" placeholder="GitHub Username" onkeyup="app.git.nameSearch(this.value)">
+    <input id="search-input" class="search-input" type="search" placeholder="Buscar usuário GitHub" value="gabrielnader" onfocus="app.git.nameSearch(this.value)">
   </div>
   
   <!-- Dynamic layout of user's info -->

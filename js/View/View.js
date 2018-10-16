@@ -7,12 +7,16 @@ class View{
     const { name, avatar_url, followers, following, bio, email } = user
     
     contentHolder.innerHTML = `
-      <h2>${name}</h2>
-      <img src='${avatar_url}'></img>
-      <p>Followers: ${followers}</p>
-      <p>Followings: ${following}</p>
-      <p>Bio: ${bio == null ? 'Nenhuma bio encontrada' : bio}</p>
-      <p>Email: ${email == null ? 'E-mail oculto' : email}</p>
+      <h2 class="user-name">${name}</h2>
+      <img class="user-image" src='${avatar_url}'></img>
+      <div class="user-follows">
+        <label class="user-followers">Followers: ${followers}</label>
+        <label class="user-followings">Followings: ${following}</label>
+      </div>
+      <div class="user-info">
+        <p class="user-email"><i class="user-icon far fa-envelope"></i>${email == null ? 'E-mail oculto' : email}</p>
+        <p class="user-bio"><i class="user-icon far fa-user"></i>${bio == null ? 'Nenhuma bio encontrada' : bio}</p>
+      </div>
     `
   }
 

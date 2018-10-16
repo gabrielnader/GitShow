@@ -1,12 +1,14 @@
 body{
   width: 100vw;
+  font-family: 'Krub', sans-serif;
 }
 
 /* HEADER */
 header nav{
   padding: 10px;
   text-align: center;
-  background-color: aquamarine;
+  background-color: #3B74A0;
+  color: #F5F5F5;
 }
 
 header nav h1{
@@ -29,12 +31,4 @@ header nav p{
   width: 60%;
   border: none;
   border-bottom: 1px solid #ccc;
-}
-
-/* VIEWS */
-.user-profile,
-.user-repositories,
-.repo-details{
-  margin: 16px;
-  box-sizing: border-box;
 }

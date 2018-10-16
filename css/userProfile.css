@@ -1,3 +1,52 @@
-#user-profile img{
+.user-profile{
+  margin: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+.user-name{
+  text-align: center;
+  font-size: 1.3rem;
+  margin: 8px 0;
+}
+
+.user-image{
   width: 100%;
+  margin-bottom: 16px;
+  border-radius: 4px;
+}
+
+.user-followers,
+.user-followings{
+  font-size: .7rem;
+  color: #F5F5F5;
+  font-weight: bold;
+  padding: 6px;
+  border-radius: 8%;
+}
+
+.user-follows{
+  margin: 0 auto 16px;
+}
+
+.user-followers{
+  background-color: #313E50;
+}
+
+.user-followings{
+  background-color: #66666E;
+}
+
+.user-info{
+  padding: 16px;
+  border-radius: 2%;
+}
+
+.user-email{
+  margin-bottom: 16px;
+}
+
+.user-icon{
+  margin-right: 10px;
 }
