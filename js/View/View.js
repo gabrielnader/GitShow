@@ -42,7 +42,14 @@ class View{
     )
     
     contentHolder.innerHTML = `
-      <h2>Repositórios</h2>
+      <div class="">
+        <h2>Repositórios</h2>
+        <select onchange="">
+          <option value="star" selected>Estrelas</option>
+          <option value="name">Nome</option>
+          <option value="lang">Linguagem</option>
+        </select>
+      </div>
       <table class="repositories-list">
         <thead>
           <tr class="repositories-list-line">
