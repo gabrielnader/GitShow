@@ -26,22 +26,30 @@ class View{
     const contentHolder = document.querySelector('#user-repositories')
     
     user.forEach(element => repos += `
-      <li>
-        <p>${element.name}</p>
-        <p>star: ${element.stargazers_count}</p>
-        <p>linguagem: ${element.language}</p>
-        <p>${element.description === null ? 'Repositório sem descrição' : element.description}</p>
-        <a href="${element.html_url}" target="_blank"><p>${element.html_url}</p></a>
-        <a href="repositoryDetails.html?user=${element.owner.login}&repo=${element.name}">Detalhes</a>
-      </li>  
+      <tr>
+        <td>
+          <p>${element.name}</p>
+        </td>
+        <td>
+          <a href="repositoryDetails.html?user=${element.owner.login}&repo=${element.name}">Detalhes</a>
+        </td>
+      </tr>
     `
     )
     
     contentHolder.innerHTML = `
       <h2>Repositórios</h2>
-      <ul>
-        ${repos}
-      </ul>
+      <table>
+        <thead>
+          <tr>
+            <th>Nome</th>
+            <th>Ver mais</th>
+          </tr>
+        </thead>
+        <tbody>
+          ${repos}
+        </tbody>
+      </table>
     `
   }
 
@@ -51,10 +59,10 @@ class View{
   
     contentHolder.innerHTML = `
       <h2>${repo.name}</h2>
-      <p>Descrição: ${repo.description}</p>
+      <p>${repo.description === null ? 'Repositório sem descrição' : repo.description}</p>
       <p>Estrelas: ${repo.stargazers_count}</p>
       <p>Linguagem: ${repo.language}</p>
-      <a href="${repo.html_url}">Link externo: ${repo.html_url}</a>
+      <a href="${repo.html_url}" target="_blank">Link externo: ${repo.html_url}</a>
     `
   }
 }
