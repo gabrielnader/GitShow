@@ -3,7 +3,7 @@ class GitHubApiConnection{
 	nameSearch(value){
 
 		const userUrl = `https://api.github.com/users/${value}`
-		const reposUrl = `https://api.github.com/users/${value}/repos`
+		const reposUrl = `https://api.github.com/users/${value}/repos?sort=stars`
 	
 		fetch(userUrl)
 		.then(response => response.json())
