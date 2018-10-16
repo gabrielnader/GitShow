@@ -2,7 +2,7 @@ class View{
   
   showUser(user){
     
-    let contentHolder = document.querySelector('#user-profile')
+    const contentHolder = document.querySelector('#user-profile')
     
     const { name, avatar_url, followers, following, bio, email } = user
     
@@ -19,7 +19,7 @@ class View{
   showRepositories(user){
     
     let repos = ``
-    let contentHolder = document.querySelector('#user-repositories')
+    const contentHolder = document.querySelector('#user-repositories')
     
     user.forEach(element => repos += `
       <li>
@@ -42,7 +42,7 @@ class View{
 
   showRepositoryDetails(repo){
   
-    let contentHolder = document.querySelector('#repo-details')
+    const contentHolder = document.querySelector('#repo-details')
   
     contentHolder.innerHTML = `
       <h2>${repo.name}</h2>
