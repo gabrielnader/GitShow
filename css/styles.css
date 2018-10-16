@@ -30,3 +30,11 @@ header nav p{
   border: none;
   border-bottom: 1px solid #ccc;
 }
+
+/* VIEWS */
+.user-profile,
+.user-repositories,
+.repo-details{
+  margin: 16px;
+  box-sizing: border-box;
+}
