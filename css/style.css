@@ -6,7 +6,7 @@ body{
 
 /* HEADER */
 header nav{
-  padding: 10px;
+  padding: 22px;
   text-align: center;
   background-color: #3B74A0;
   color: #F5F5F5;
@@ -17,7 +17,7 @@ header nav h1{
 }
 
 header nav p{
-  font-size: .6rem;
+  font-size: .7rem;
 }
 
 /* SEARCH */
@@ -29,28 +29,24 @@ header nav p{
 .search-input{
   margin-top: 8px;
   padding: 8px;
-  width: 60%;
+  width: 50%;
   border: none;
   border-bottom: 1px solid #ccc;
 }
 
-@media(min-width: 576px){
-  /* HEADER */
-  header nav{
-    padding: 16px;
-  }
+.search-icon{
+  font-size: .7rem;
 }
 
 @media(min-width: 768px){
-  /* HEADER */
-  header nav{
-    padding: 20px;
-  }
-
   /* SEARCH */
   .search-input{
-    width: 50%;
+    width: 40%;
     font-size: 1.1rem;
+  }
+
+  .search-icon{
+    font-size: .9rem;
   }
 }
 
@@ -63,16 +59,43 @@ header nav p{
   }
 
   /* HEADER */
+  header nav{
+    padding: 26px;
+  }
+
   header nav h1{
-    font-size: 1.6rem;
+    font-size: 1.8rem;
   }
   
   header nav p{
-    font-size: .7rem;
+    font-size: 1rem;
   }
   
   /* SEARCH */
   .search-engine{
     margin-top: 32px;
+  }
+
+  .search-icon{
+    font-size: 1rem;
+  }
+
+  .search-input{
+    width: 30%;
+  }
+}
+
+@media(min-width: 992px){
+  /* HEADER */
+  header nav{
+    padding: 32px;
+  }
+
+  header nav h1{
+    font-size: 2rem;
+  }
+
+  header nav p{
+    font-size: 1.1rem;
   }
 }
