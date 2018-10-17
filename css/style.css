@@ -24,25 +24,27 @@ header nav p{
 /* SEARCH */
 .search-engine{
   border-bottom: 1px inset #ccc;
-  width: 200px;
+  width: 150px;
   margin: 0 auto;
   padding: 6px;
 }
 
 .search-input{
-  width: 85%;
+  width: 80%;
   border: none;
+  outline: none;
 }
 
 .search-icon{
   font-size: .7rem;
   float: left;
   margin: 4px 12px 0 0;
+  color: #ccc;
 }
 
 @media(min-width: 768px){
   .search-input{
-    font-size: .8rem;
+    font-size: .7rem;
   }
 }
 
@@ -72,7 +74,7 @@ header nav p{
 
   .search-input,
   .search-icon{
-    font-size: .9rem;
+    font-size: .7rem;
   }
 }
 
