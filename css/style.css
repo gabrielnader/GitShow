@@ -4,6 +4,10 @@ body{
   box-sizing: border-box;
 }
 
+.none{
+  display: none;
+}
+
 /* HEADER */
 header nav{
   padding: 22px;
@@ -40,6 +44,14 @@ header nav p{
   float: left;
   margin: 4px 12px 0 0;
   color: #ccc;
+}
+
+/* ERROR */
+.error{
+  text-align: center;
+  margin-top: 60px;
+  color: red;
+  display: none;
 }
 
 @media(min-width: 768px){

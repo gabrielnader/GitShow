@@ -25,12 +25,14 @@
       <p>by Gabriel Nader</p>
     </nav>
   </header>
-  
+
   <!-- GitHub user's search input -->
   <div class="search-engine">
     <input id="search-input" class="search-input" type="text" placeholder="Buscar usuário GitHub" onkeyup="app.git.nameSearch(this.value)">
     <i class="fas fa-search search-icon"></i>
   </div>
+
+  <p id="error" class="error" dis></p>
   
   <div class="user">
     <!-- Dynamic layout of user's profile -->

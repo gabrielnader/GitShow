@@ -8,10 +8,12 @@ class GitHubApiConnection{
 		fetch(userUrl)
 		.then(response => response.json())
 		.then(data => app.view.showUser(data))
+		.catch(error => app.view.errorView(error))
 	
 		fetch(reposUrl)
 		.then(response => response.json())
 		.then(data => app.view.showRepositories(data))
+		.catch(error => app.view.errorView(error))
 	}
 	
 	repositorySearch(userName, repository){
@@ -21,5 +23,6 @@ class GitHubApiConnection{
 		fetch(singleRepo)
 		.then(response => response.json())
 		.then(data => app.view.showRepositoryDetails(data))
+		.catch(error => app.view.errorView(error))
 	}
 }

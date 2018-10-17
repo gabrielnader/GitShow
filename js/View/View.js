@@ -2,33 +2,35 @@ class View{
   
   showUser(user){
     
+    const error = document.querySelector('#error')
     const contentHolder = document.querySelector('#user-profile')
     
     const { name, avatar_url, followers, following, bio, email } = user
 
-    if(name == null){
-      contentHolder.innerHTML = `<p>Usuário não encontrado!</p>`
-    }else{
-      contentHolder.innerHTML = `
-        <img class="user-image" src='${avatar_url}'></img>
-        <h2 class="user-name">${name}</h2>
-        <div class="user-follows">
-          <label class="user-followers">Followers: ${followers}</label>
-          <label class="user-followings">Followings: ${following}</label>
-        </div>
-        <div class="user-info">
-          <p class="user-email"><i class="user-icon far fa-envelope"></i>${email == null ? 'E-mail oculto' : email}</p>
-          <p class="user-bio"><i class="user-icon far fa-user"></i>${bio == null ? 'Nenhuma bio encontrada' : bio}</p>
-        </div>
-      `
-    }
+    error.style.display = 'none'
+
+    contentHolder.innerHTML = `
+      <img class="user-image" src='${avatar_url}'></img>
+      <h2 class="user-name">${name}</h2>
+      <div class="user-follows">
+        <label class="user-followers">Followers: ${followers}</label>
+        <label class="user-followings">Followings: ${following}</label>
+      </div>
+      <div class="user-info">
+        <p class="user-email"><i class="user-icon far fa-envelope"></i>${email == null ? 'E-mail oculto' : email}</p>
+        <p class="user-bio"><i class="user-icon far fa-user"></i>${bio == null ? 'Nenhuma bio encontrada' : bio}</p>
+      </div>
+    `
   }
 
   showRepositories(user){
     
+    const error = document.querySelector('#error')
     let repos = ``
     const userName = user[0].owner.login
     const contentHolder = document.querySelector('#user-repositories')
+
+    error.style.display = 'none'
     
     user.forEach(element => {
       repos += `
@@ -66,8 +68,11 @@ class View{
   }
 
   showRepositoryDetails(repo){
-  
+
+    const error = document.querySelector('#error')
     const contentHolder = document.querySelector('#repo-details')
+    
+    error.style.display = 'none'
   
     contentHolder.innerHTML = `
       <div class="repo-owner">
@@ -87,5 +92,13 @@ class View{
         </div>
       </div>
     `
+  }
+
+  errorView(){
+
+    const error = document.querySelector('#error')
+
+    error.style.display = 'block'
+    error.innerHTML = 'A conexão falhou. Tente novamente.'
   }
 }
