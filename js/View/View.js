@@ -70,10 +70,10 @@ class View{
     const contentHolder = document.querySelector('#repo-details')
   
     contentHolder.innerHTML = `
-      <h2>${repo.name}</h2>
+      <h2 class="repo-name">${repo.name}</h2>
       <p>${repo.description === null ? 'Repositório sem descrição' : repo.description}</p>
       <p>Estrelas: ${repo.stargazers_count}</p>
-      <p>Linguagem: ${repo.language}</p>
+      <p>Linguagem: ${repo.language === null ? 'Nenhuma linguagem selecionada' : repo.language}</p>
       <a href="${repo.html_url}" target="_blank">Link externo: ${repo.html_url}</a>
     `
   }
