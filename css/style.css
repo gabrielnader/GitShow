@@ -10,6 +10,7 @@ header nav{
   text-align: center;
   background-color: #3B74A0;
   color: #F5F5F5;
+  margin-bottom: 16px;
 }
 
 header nav h1{
@@ -22,36 +23,26 @@ header nav p{
 
 /* SEARCH */
 .search-engine{
-  text-align: center;
-  margin-top: 16px;
+  border-bottom: 1px inset #ccc;
+  width: 200px;
+  margin: 0 auto;
+  padding: 6px;
 }
 
 .search-input{
-  margin-top: 8px;
-  padding: 6px;
-  width: 50%;
-  border-radius: 10px;
-  border: 1px inset #ccc;
+  width: 85%;
+  border: none;
 }
 
 .search-icon{
   font-size: .7rem;
-}
-
-@media(min-width:576px){
-  .search-input{
-    width: 35%;
-  }
+  float: left;
+  margin: 4px 12px 0 0;
 }
 
 @media(min-width: 768px){
   .search-input{
-    width: 40%;
-    font-size: 1.1rem;
-  }
-
-  .search-icon{
-    font-size: .9rem;
+    font-size: .8rem;
   }
 }
 
@@ -79,12 +70,9 @@ header nav p{
     margin-top: 32px;
   }
 
+  .search-input,
   .search-icon{
-    font-size: 1rem;
-  }
-
-  .search-input{
-    width: 30%;
+    font-size: .9rem;
   }
 }
 
