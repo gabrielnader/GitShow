@@ -12,6 +12,10 @@
   margin: 0 auto;
 }
 
+.repositories-list-line:nth-child(even) {
+  background-color: #F5F5F5;
+}
+
 .repositories-list-col,
 .repositories-list-first-col {
   border: 1px solid #ccc;
@@ -22,20 +26,6 @@
 .repositories-list-first-col{
   text-align: center;
   font-weight: bolder;
-}
-
-.repositories-list-line:nth-child(even) {
-  background-color: #F5F5F5;
-}
-
-.table-header{
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 16px;
-}
-
-.table-header h2{
-  font-weight: bold;
 }
 
 table select{

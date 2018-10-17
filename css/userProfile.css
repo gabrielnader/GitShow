@@ -5,17 +5,17 @@
   flex-direction: column;
 }
 
+.user-image{
+  width: 250px;
+  margin: 0 auto 16px;
+  border-radius: 4px;
+}
+
 .user-name{
   text-align: center;
   font-size: 1.3rem;
   margin-bottom: 16px;
   font-weight: bold;
-}
-
-.user-image{
-  width: 250px;
-  margin: 0 auto 16px;
-  border-radius: 4px;
 }
 
 .user-follows{
@@ -56,12 +56,12 @@
 }
 
 @media(min-width: 576px){
-  .user-name{
-    margin-bottom: 22px;
-  }
-
   .user-image{
     width: 280px;
+  }
+
+  .user-name{
+    margin-bottom: 22px;
   }
 
   .user-followers,
@@ -78,8 +78,4 @@
   .user-profile{
     margin-top: 24px;
   }
-}
-
-@media(min-width: 1200px){
-
 }

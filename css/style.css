@@ -39,14 +39,12 @@ header nav p{
 }
 
 @media(min-width:576px){
-  /* SEARCH */
   .search-input{
     width: 35%;
   }
 }
 
 @media(min-width: 768px){
-  /* SEARCH */
   .search-input{
     width: 40%;
     font-size: 1.1rem;
@@ -65,7 +63,6 @@ header nav p{
     margin-top: 22px;
   }
 
-  /* HEADER */
   header nav{
     padding: 26px;
   }
@@ -78,7 +75,6 @@ header nav p{
     font-size: 1rem;
   }
   
-  /* SEARCH */
   .search-engine{
     margin-top: 32px;
   }
@@ -93,7 +89,6 @@ header nav p{
 }
 
 @media(min-width: 1200px){
-  /* HEADER */
   header nav{
     padding: 32px;
   }
