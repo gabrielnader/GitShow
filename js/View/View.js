@@ -10,8 +10,8 @@ class View{
       contentHolder.innerHTML = `<p>Usuário não encontrado!</p>`
     }else{
       contentHolder.innerHTML = `
-        <h2 class="user-name">${name}</h2>
         <img class="user-image" src='${avatar_url}'></img>
+        <h2 class="user-name">${name}</h2>
         <div class="user-follows">
           <label class="user-followers">Followers: ${followers}</label>
           <label class="user-followings">Followings: ${following}</label>
@@ -37,25 +37,25 @@ class View{
             <p>${element.name}</p>
           </td>
           <td class="repositories-list-col">
-            <a href="repositoryDetails.html?user=${element.owner.login}&repo=${element.name}">Detalhes</a>
+            <a href="repositoryDetails.html?user=${element.owner.login}&repo=${element.name}">Ver detalhes</a>
           </td>
         </tr>
       `
     })
     
     contentHolder.innerHTML = `
-      <h2>Repositórios</h2>
-      <select onchange="app.git.nameSearch('${userName}', this.value)">
-        <option disabled selected>Ordem</option>
-        <option value="stars">Estrelas</option>
-        <option value="forks">Forks</option>
-        <option value="updated">Atualização</option>
-      </select>
       <table class="repositories-list">
         <thead>
           <tr class="repositories-list-line">
-            <th class="repositories-list-first-col">Nome</th>
-            <th class="repositories-list-first-col">Ver mais</th>
+            <th class="repositories-list-first-col">Repositórios</th>
+            <th class="repositories-list-first-col">
+              <select onchange="app.git.nameSearch('${userName}', this.value)">
+                <option disabled selected>Ordenar por</option>
+                <option value="stars">Estrelas</option>
+                <option value="forks">Forks</option>
+                <option value="updated">Atualização</option>
+              </select>
+            </th>
           </tr>
         </thead>
         <tbody>

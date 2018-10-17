@@ -28,14 +28,21 @@ header nav p{
 
 .search-input{
   margin-top: 8px;
-  padding: 8px;
+  padding: 6px;
   width: 50%;
-  border: none;
-  border-bottom: 1px solid #ccc;
+  border-radius: 10px;
+  border: 1px inset #ccc;
 }
 
 .search-icon{
   font-size: .7rem;
+}
+
+@media(min-width:576px){
+  /* SEARCH */
+  .search-input{
+    width: 35%;
+  }
 }
 
 @media(min-width: 768px){
@@ -54,8 +61,8 @@ header nav p{
   .user{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    margin-top: 32px;
+    justify-content: space-around;
+    margin-top: 22px;
   }
 
   /* HEADER */
@@ -85,7 +92,7 @@ header nav p{
   }
 }
 
-@media(min-width: 992px){
+@media(min-width: 1200px){
   /* HEADER */
   header nav{
     padding: 32px;
