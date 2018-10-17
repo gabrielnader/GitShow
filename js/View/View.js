@@ -70,11 +70,22 @@ class View{
     const contentHolder = document.querySelector('#repo-details')
   
     contentHolder.innerHTML = `
-      <h2 class="repo-name">${repo.name}</h2>
-      <p>${repo.description === null ? 'Repositório sem descrição' : repo.description}</p>
-      <p>Estrelas: ${repo.stargazers_count}</p>
-      <p>Linguagem: ${repo.language === null ? 'Nenhuma linguagem selecionada' : repo.language}</p>
-      <a href="${repo.html_url}" target="_blank">Link externo: ${repo.html_url}</a>
+      <div class="repo-owner">
+        <img class="repo-owner-image" src="${repo.owner.avatar_url}">
+        <h3 class="repo-owner-name">${repo.owner.login}</h3>
+      </div>
+      <div class="repo-info">
+        <h2 class="repo-name">${repo.name}</h2>
+        <p class="repo-description">${repo.description === null ? 'Repositório sem descrição' : repo.description}</p>
+        <div class="repo-other-infos">
+          <p>${repo.language === null ? 'Nenhuma linguagem selecionada' : repo.language}</p>
+          <div class="repo-star-and-link">  
+            <p><i class="star-icon fas fa-star"></i>${repo.stargazers_count}</p>
+            <p><i class="fork-icon fas fa-code-branch"></i>${repo.forks_count}</p>
+            <a href="${repo.html_url}" target="_blank"><i class="git-open-icon fab fa-github-alt"></i>Abrir no GitHub</a>
+          </div>
+        </div>
+      </div>
     `
   }
 }

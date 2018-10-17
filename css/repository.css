@@ -1,6 +1,94 @@
+.repo-details{
+  margin: 20px;
+  box-sizing: border-box;
+}
+
+.repo-details p,
+.repo-details a{
+  font-size: .9rem;
+}
+
+.repo-owner{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.repo-owner-image{
+  width: 80px;
+  border-radius: 100%;
+  margin: 0 auto 12px;
+}
+
 .repo-name{
   text-align: center;
   font-size: 1.5rem;
   font-weight: bold;
+  margin: 16px 0;
+}
+
+.repo-description{
+  padding: 12px;
+  box-sizing: border-box;
+  line-height: 1.1rem;
+  margin-bottom: 16px;
+}
+
+.repo-other-infos{
+  background-color: #f5f5f5;
+  padding: 12px;
+  box-sizing: border-box;
+  border: .1px solid #ccc;
+}
+
+.repo-star-and-link{
+  display: flex;
+  justify-content: space-between;
   margin-top: 16px;
+}
+
+.star-icon,
+.lang-icon,
+.fork-icon,
+.git-open-icon{
+  margin-right: 6px;
+}
+
+@media(min-width:576px){
+  .repo-details{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .repo-owner{
+    width: 25%;
+  }
+
+  .repo-owner-image{
+    width: 100px;
+  }
+
+  .repo-info{
+    width: 60%;
+  }
+}
+
+@media(min-width:768px){
+  .repo-owner-image{
+    width: 120px;
+  }
+
+  .repo-info{
+    width: 65%;
+  }
+}
+
+@media(min-width:992px){
+  .repo-details{
+    margin-top: 32px;
+  }
+
+  .repo-owner-image{
+    width: 150px;
+  }
 }
