@@ -86,9 +86,14 @@
 @media(min-width:992px){
   .repo-details{
     margin-top: 32px;
+    justify-content: space-around;
   }
 
   .repo-owner-image{
     width: 150px;
+  }
+
+  .repo-info{
+    width: 50%;
   }
 }
